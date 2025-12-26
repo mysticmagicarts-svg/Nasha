@@ -37,7 +37,7 @@
       // Read URL params
       const params = new URLSearchParams(window.location.search);
       const name = params.get("name") || "Kavya";
-      let candleCount = parseInt(params.get("candles")) || 4;
+      let candleCount = parseInt(params.get("candles")) || 16;
       candleCount = Math.min(Math.max(candleCount, 1), 30);
 
       const birthdayText = document.getElementById("birthdayText");
