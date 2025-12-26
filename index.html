@@ -37,7 +37,7 @@
       // Read URL params
       const params = new URLSearchParams(window.location.search);
       const name = params.get("name") || "Kavya";
-      let candleCount = parseInt(params.get("candles")) || 6;
+      let candleCount = parseInt(params.get("candles")) || 4;
       candleCount = Math.min(Math.max(candleCount, 1), 30);
 
       const birthdayText = document.getElementById("birthdayText");
@@ -62,7 +62,7 @@
         const availableWidth = CAKE_VISUAL_WIDTH;
         const candlesPerRow = 6;
         const rowCount = Math.ceil(count / candlesPerRow);
-        const shiftAmount = 6;
+        const shiftAmount = 4;
 
         for (let i = 0; i < count; i++) {
           const candle = document.createElement("div");
@@ -83,7 +83,7 @@
 
           candle.style.position = "absolute";
           candle.style.top = `${10 + row * 3}px`;
-          candle.style.left = `${leftBase - rowShift + 6}px`;
+          candle.style.left = `${leftBase - rowShift + 4}px`;
 
           cake.appendChild(candle);
         }
